@@ -1,0 +1,172 @@
+@use 'variables' as v;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.2rem;
+  background-color: v.$light-grey;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  width: 90%;
+  max-width: 840px;
+  margin: 0 auto;
+  background-color: v.$white;
+  border-radius: 20px 20px 100px 20px;
+  padding: 40px 20px;
+
+  @media(min-width: 900px) {
+    padding: 56px;
+    margin: 20px 0;
+  }
+
+  &__date {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    color: v.$mokey-grey;
+
+    @media(min-width: 900px) {
+      gap: 34px;
+      justify-content: flex-start;
+    }
+
+    .date {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      &__title {
+        font-size: 1.2rem;
+        color: v.$mokey-grey;
+        letter-spacing: .4rem;
+
+        @media(min-width: 900px) {
+          font-size: 1.6rem;
+        }
+      }
+
+      .input__date {
+        width: 86px;
+        height: 50px;
+        border-radius: 8px;
+        outline-color: v.$purple;
+        outline-width: 1px;
+        border: 1px solid v.$light-grey;
+        padding-left: 16px;
+        font-weight: 900;
+        font-size: 1.8rem;
+
+        &::placeholder {
+          color: v.$mokey-grey;
+          opacity: .8;
+        }
+
+        @media(min-width: 900px) {
+          width: 160px;
+          height: 70px;
+          font-size: 2.2rem;
+        }
+      }
+
+      .error {
+        font-size: .7rem;
+        color: v.$light-red;
+        font-style: italic;
+
+        @media(min-width: 900px) {
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    .invalid {
+      color: red;
+      text-align: center;
+    }
+  }
+
+  &__cta {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+    position: relative;
+
+    @media(min-width: 900px) {
+      justify-content: end;
+      margin: 0;
+    }
+
+    &::after {
+      content: '';
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      top: calc(50% - 1px);
+      background-color: v.$off-white;
+    }
+
+    .cta {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background-color: v.$purple;
+      border: none;
+      z-index: 1;
+      cursor: pointer;
+
+      &:hover {
+        background-color: v.$off-black;
+        transition: all .3s ease;
+      }
+
+      @media(min-width: 900px) {
+        width: 100px;
+        height: 100px;
+      }
+
+      .arrow {
+        width: 30px;
+        height: 30px;
+
+        @media(min-width: 900px) {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+  }
+
+  &__calculator {
+    display: flex;
+    flex-direction: column;
+
+    .calculator {
+      font-size: 4rem;
+      font-weight: 900;
+      font-style: italic;
+
+      @media(min-width: 900px) {
+        font-size: 8.6rem;
+      }
+
+      .number {
+        color: v.$purple;
+      }
+    }
+  }
+}

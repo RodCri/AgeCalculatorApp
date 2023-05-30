@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Age calculator app</title>
+  <meta name="description" content="Challenge age calculator frontendmentor">
+  <meta name="keywords" content="age calculator, challenge, frontendmentor">
+  <meta name="author" content="Cristian Camilo Rodriguez">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <main class="app">
+    <header class="app__date">
+      <div class="date">
+        <label class="date__title">DAY</label>
+        <input type="number" name="day" id="day" class="input__date" placeholder="DD">
+        <span class="error"></span>
+      </div>
+      <div class="date">
+        <label class="date__title">MONTH</label>
+        <input type="number" name="month" id="month" class="input__date" placeholder="MM">
+        <span class="error"></span>
+      </div>
+      <div class="date">
+        <label class="date__title">YEAR</label>
+        <input type="number" name="year" id="year" class="input__date" placeholder="YYYY">
+        <span class="error"></span>
+      </div>
+    </header>
+    <section class="app__cta">
+      <button class="cta"><img src="assets/images/icon-arrow.svg" alt="" class="arrow"></button>
+    </section>
+    <section class="app__calculator">
+      <p class="calculator"><span class="number" id="years">--</span> years</p>
+      <p class="calculator"><span class="number" id="months">--</span> months</p>
+      <p class="calculator"><span class="number" id="days">--</span> days</p>
+    </section>
+  </main>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
